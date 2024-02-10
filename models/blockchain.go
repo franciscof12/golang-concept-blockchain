@@ -14,7 +14,6 @@ func NewBlockchain(difficulty int) Blockchain {
 		TimeStamp:    time.Now(),
 	}
 	genesisBlock.Hash = genesisBlock.CalculateHash()
-
 	return Blockchain{
 		GenesisBlock: genesisBlock,
 		Chain:        []Block{genesisBlock},
